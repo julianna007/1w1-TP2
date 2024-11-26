@@ -1,0 +1,114 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color:#F3D3E6;
+}
+
+.pied-de-page{
+    background-color: #54577C;
+}
+.global{
+     min-height: 100vh;       
+     background-color:rgba(0, 0, 0, .3);
+     margin: 0 auto;
+     padding: 20px;
+}
+
+.hero{
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__nav{
+    display: flex;
+    background-color: #a57e95;
+}
+.hero__nav a{
+    color:#F3D3E6;
+    text-decoration: none;
+    padding:10px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+a:hover{
+    color:aliceblue;
+    background-color: #525174;
+
+}
+
+.hero__pied{
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero__nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.hero__text-logo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.hero__h2{
+    color:#F3D3E6;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 5rem;;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    color:#F3D3E6;
+    flex : 2 1 300px;
+    padding: 50px;
+}
+
+.hero__figure{
+    flex: 1  1 250px;
+}
+
+.hero__figure img{
+   display : block;
+   width : 100%;
+   height: auto;
+}
+
+.hero__pied{
+    color:#F3D3E6;
+    padding: 20px;
+}
+
+.hero__titre{
+    font-size: 5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.hero__info{
+    line-height: 35px;
+    padding-bottom: 20px;
+}
+
+header{
+    background-image: url("../images/cinema_fond.jpg");
+}
+
+.entete{
+
+}
