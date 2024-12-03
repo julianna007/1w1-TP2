@@ -1,114 +1,190 @@
-*{
-    margin:0px;
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
-    color:#F3D3E6;
+    color: #F3D3E6;
 }
 
-.pied-de-page{
+/*/////////////////////////ACCEUIL/////////////////////////////*/
+
+header {
+    background-image: url("../images/fond_3.jpg");
+    background-size: cover; /* Adjusts to fit any screen size */
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.pied-de-page {
     background-color: #54577C;
 }
-.global{
-     min-height: 100vh;       
-     background-color:rgba(0, 0, 0, .3);
-     margin: 0 auto;
-     padding: 20px;
-}
 
-.hero{
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hero__nav{
-    display: flex;
-    background-color: #a57e95;
-}
-.hero__nav a{
-    color:#F3D3E6;
-    text-decoration: none;
-    padding:10px;
-    margin: 10px;
-    margin-top: 10px;
-}
-
-a:hover{
-    color:aliceblue;
-    background-color: #525174;
-
-}
-
-.hero__pied{
-    display: flex;
-    justify-content: center;
-
-}
-
-.hero__nav{
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.hero__text-logo{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
-.hero__h2{
-    color:#F3D3E6;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   font-size: 5rem;;
-}
-
-.hero__text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
-    color:#F3D3E6;
-    flex : 2 1 300px;
-    padding: 50px;
-}
-
-.hero__figure{
-    flex: 1  1 250px;
-}
-
-.hero__figure img{
-   display : block;
-   width : 100%;
-   height: auto;
-}
-
-.hero__pied{
-    color:#F3D3E6;
+.global {
+    min-height: 100vh;       
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
     padding: 20px;
 }
 
-.hero__titre{
-    font-size: 5rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.hero__info{
-    line-height: 35px;
+.hero__nav {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: center; /* Centers the navigation links */
+    background-color: #830081;
+    padding: 10px 20px;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.hero__nav a {
+    color: #F3D3E6;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    white-space: nowrap; /* Prevents text wrapping */
+    font-family: 'straight';
+    font-size: 1rem;
+    transition: transform 300ms ease-out;
+}
+
+.hero__nav a:hover {
+    color: aliceblue;
+    background-color: #525174;
+    transform: translateY(10%);
+}
+
+.hero__pied {
+    display: flex;
+    justify-content: center;
+    color: #F3D3E6;
+    padding: 20px;
+}
+
+.hero__text-logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    color: #F3D3E6;
+    padding: 50px;
+}
+
+.hero__titre {
+    font-size: clamp(3rem, 8vw, 10rem); /* Minimum: 3rem, Preferred: 8% of viewport width, Maximum: 10rem */
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'cursive';
+}
+
+.hero__info {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: 'straight';;
+    justify-content: center;
+    width: 80%; /* Adjusts to smaller screens */
     padding-bottom: 20px;
+    text-align: center;
 }
 
-header{
-    background-image: url("../images/cinema_fond.jpg");
+
+/* Media Queries for Horizontal Navigation Styling */
+@media (max-width: 768px) {
+    .hero__nav {
+        justify-content: space-between; /* Adjusts spacing for smaller screens */
+    }
+
+    .hero__nav a {
+        font-size: 0.9rem; /* Slightly smaller font for mobile */
+        padding: 8px 10px;
+    }
 }
 
-.entete{
+@media (max-width: 480px) {
+    .hero__nav {
+        justify-content: flex-start; /* Aligns links to the left if desired */
+        overflow-x: scroll; /* Allows scrolling for very small screens */
+    }
 
+    .hero__nav a {
+        font-size: 0.8rem; /* Further adjustment for tiny screens */
+        padding: 5px 8px;
+    }
+}
+
+
+/*/////////////////////////ARTICLES (NOUVELLES)/////////////////////////////*/
+
+#section-1 {
+   /* background-image: url(../images/fond_section-1.webp);*/
+    background-color: #e804d4;
+    color: #fcc3fc;
+}
+
+
+
+.article__figure {
+    /* position: absolute;
+    top:50%;
+    height:50%;
+    */
+    display:flex ;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transform : scale(.95);
+    transition : transform .25s, filter .25s;
+    filter:grayscale(1) blur(1px);
+  
+  
+  }
+  .article__figure:hover {
+    border-radius: 20px;
+    transform : scale(1) translateX(0);
+    filter:grayscale(0) blur(0);
+  
+  }
+  
+  .article {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .article:nth-of-type(even)  .article__figure{
+    order: 3;
+  }
+
+  .article__figure img{
+    border-radius: 20px;
+  }
+
+  .article__figure img:hover{
+    border: 10px solid royalblue;
+    border-radius: 20px;
+  }
+
+  figcaption{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content:center ;
+  }
+
+.article__p{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
